@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>CSC 642 842 Fall 2021 Individual Assignment Cindy Fung Chan</title>
+
+    <!-- reCaptcha -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <style>
+        .form-label {
+            font-weight: bolder;
+        }
+    </style>
+
+  </head>
+  <body>
+      <div class="container">
+        
+        <!-- Title -->
+        <h1 class="form-title-1 text-center mt-3">CSC 642 842 Fall 2021 Individual Assignment Cindy Fung Chan</h1>
+        <h2 class="form-title-2 text-center fw-bold border-bottom border-2 pb-4">Data Survey Form</h1>
+
+        <!-- Form -->
+        <form action="result.html" method="post">
+            <!-- Form Info -->
+            <div class="col-auto">
+                <p class="form-info mt-4">The survey consists of several questions and usually takes 3-5 minutes to complete.</p>
+            </div>
+
+            <!-- Required Field Text-->
+            <div class="col-auto">
+                <p class="form-info-required-field mb-4 fw-bolder">Fields marked with an asterisk (*) are required.</p>
+            </div>
+
+            <!-- Last Name * -->
+            <!-- VALIDATE 40 CHARACTERS -->
+            <div class="col-md-6 mb-2">
+                  <label for="lastName" class="form-label mb-1">Last Name *</label>
+                  <input type="text" class="form-control" id="lastName" placeholder="Your answer" maxlength="40" required>  
+            </div>
+            
+            <!-- First Name * -->
+            <!-- VALIDATE 40 CHARACTERS --> 
+            <div class="col-md-6 mb-4">
+                  <label for="firstName" class="form-label mb-1">First Name *</label>
+                  <input type="text" class="form-control" id="firstName" placeholder="Your answer" maxlength="40" required>
+            </div>
+           
+            <!-- Preferred Title * --> 
+            <fieldset class="row mb-2">
+              <legend class="col-form-label col-sm-2 col-lg-1 pt-0 fw-bolder">Title *</legend>
+              <div class="col-sm-4">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="titleRadios" id="gridRadios1" value="None" required>
+                  <label class="form-check-label" for="gridRadios1">
+                    None
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="titleRadios" id="gridRadios2" value="Student" >
+                  <label class="form-check-label" for="gridRadios2">
+                    Student
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="titleRadios" id="gridRadios3" value="Professor" >
+                  <label class="form-check-label" for="gridRadios3">
+                    Professor
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="titleRadios" id="gridRadios4" value="Staff" >
+                  <label class="form-check-label" for="gridRadios4">
+                    Staff
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="titleRadios" id="gridRadios5" value="Retired" >
+                  <label class="form-check-label" for="gridRadios5">
+                    Retired
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          
+            <!-- Height (optional) -->
+            <div class="row mb-2">
+              <div class="col-form-label col-sm-2 col-lg-1 pt-0 fw-bolder">Height</div>
+              <div class="col-sm-4">
+                <label class="visually-hidden" for="heightSelect">Choose Height</label>
+                <select class="form-select" id="heightSelect">
+                  <option selected>Choose...</option>
+                  <option value="3' 11&quot or Below">3' 11" or Below</option>
+                  <option value="4' 0&quot">4' 0"</option>
+                  <option value="4' 1&quot">4' 1" </option>
+                  <option value="4' 2&quot">4' 2" </option>
+                  <option value="4' 3&quot">4' 3" </option>
+                  <option value="4' 4&quot">4' 4" </option>
+                  <option value="4' 5&quot">4' 5" </option>
+                  <option value="4' 6&quot">4' 6" </option>
+                  <option value="4' 7&quot">4' 7" </option>
+                  <option value="4' 8&quot">4' 8" </option>
+                  <option value="4' 9&quot">4' 9" </option>
+                  <option value="4' 10&quot">4' 10" </option>
+                  <option value="4' 11&quot">4' 11" </option>
+                  <option value="5' 0&quot">5' 0"</option>
+                  <option value="5' 1&quot">5' 1" </option>
+                  <option value="5' 2&quot">5' 2" </option>
+                  <option value="5' 3&quot">5' 3" </option>
+                  <option value="5' 4&quot">5' 4" </option>
+                  <option value="5' 5&quot">5' 5" </option>
+                  <option value="5' 6&quot">5' 6" </option>
+                  <option value="5' 7&quot">5' 7" </option>
+                  <option value="5' 8&quot">5' 8" </option>
+                  <option value="5' 9&quot">5' 9" </option>
+                  <option value="5' 10&quot">5' 10" </option>
+                  <option value="5' 11&quot">5' 11" </option>
+                  <option value="6' 0&quot">6' 0"</option>
+                  <option value="6' 1&quot">6' 1" </option>
+                  <option value="6' 2&quot">6' 2" </option>
+                  <option value="6' 3&quot">6' 3" </option>
+                  <option value="6' 4&quot">6' 4" </option>
+                  <option value="6' 5&quot">6' 5" </option>
+                  <option value="6' 6&quot">6' 6" </option>
+                  <option value="6' 7&quot">6' 7" </option>
+                  <option value="6' 8&quot">6' 8" </option>
+                  <option value="6' 9&quot">6' 9" </option>
+                  <option value="6' 10&quot">6' 10" </option>
+                  <option value="6' 11&quot">6' 11" </option>
+                  <option value="7' 0&quot or Above">7' 0" or Above </option>
+                </select>
+              </div>
+              <div class="col-auto">
+                <div id="heightExample" class="form-text">e.g. 5 feet 6 inches - 5' 6"</div>
+              </div>
+            </div>
+            
+            <!-- Phone Number (optional) -->
+            <!-- VALIDATE 10 DIGITS -->
+            <div class="col-sm-4">
+              <label for="phone" class="form-label mb-1">Phone Number</label>
+            </div>
+            <div class="row mb-4">
+              <div class="col-sm-5">
+                <input type="tel" class="form-control" id="phone" placeholder="Digits Only: 0 to 9" maxlength="10" pattern="[0-9]{10}" >
+              </div>
+              <div class="col-auto">
+                <div id="phoneExample" class="form-text">e.g 1234567890</div>
+              </div>
+            </div>
+            
+            <!-- Address, City, State, Zip code * -->
+            <!-- VALIDATE 40 CHARACTERS -->
+            <div class="col-md-6">
+              <label for="address" class="form-label mb-1">Address *</label>
+              <input type="text" class="form-control mb-1" id="address" placeholder="1234 Main St" maxlength="40" pattern="[0-9]+[A-Za-z\s]+[A-Za-z\s]" required>
+            </div>
+            <div class="col-md-6">
+              <label for="city" class="form-label mb-1">City *</label>
+              <input type="text" class="form-control mb-1" id="city" placeholder="Enter your city" maxlength="40" pattern="[A-Za-z\s]+" required>
+            </div>
+            <div class="col-md-4">
+              <label for="state" class="form-label mb-1">State *</label>
+              <select id="state" class="form-select mb-1" required>
+                <option selected disabled>-- Select State --</option>
+                <option value="AL">Alabama</option>
+                <option value="AK">Alaska</option>
+                <option value="AZ">Arizona</option>
+                <option value="AR">Arkansas</option>
+                <option value="CA">California</option>
+                <option value="CO">Colorado</option>
+                <option value="CT">Connecticut</option>
+                <option value="DE">Delaware</option>
+                <option value="DC">District Of Columbia</option>
+                <option value="FL">Florida</option>
+                <option value="GA">Georgia</option>
+                <option value="HI">Hawaii</option>
+                <option value="ID">Idaho</option>
+                <option value="IL">Illinois</option>
+                <option value="IN">Indiana</option>
+                <option value="IA">Iowa</option>
+                <option value="KS">Kansas</option>
+                <option value="KY">Kentucky</option>
+                <option value="LA">Louisiana</option>
+                <option value="ME">Maine</option>
+                <option value="MD">Maryland</option>
+                <option value="MA">Massachusetts</option>
+                <option value="MI">Michigan</option>
+                <option value="MN">Minnesota</option>
+                <option value="MS">Mississippi</option>
+                <option value="MO">Missouri</option>
+                <option value="MT">Montana</option>
+                <option value="NE">Nebraska</option>
+                <option value="NV">Nevada</option>
+                <option value="NH">New Hampshire</option>
+                <option value="NJ">New Jersey</option>
+                <option value="NM">New Mexico</option>
+                <option value="NY">New York</option>
+                <option value="NC">North Carolina</option>
+                <option value="ND">North Dakota</option>
+                <option value="OH">Ohio</option>
+                <option value="OK">Oklahoma</option>
+                <option value="OR">Oregon</option>
+                <option value="PA">Pennsylvania</option>
+                <option value="RI">Rhode Island</option>
+                <option value="SC">South Carolina</option>
+                <option value="SD">South Dakota</option>
+                <option value="TN">Tennessee</option>
+                <option value="TX">Texas</option>
+                <option value="UT">Utah</option>
+                <option value="VT">Vermont</option>
+                <option value="VA">Virginia</option>
+                <option value="WA">Washington</option>
+                <option value="WV">West Virginia</option>
+                <option value="WI">Wisconsin</option>
+                <option value="WY">Wyoming</option>
+              </select>
+            </div>
+            <div class="col-md-2">
+              <label for="zipcode" class="form-label mb-1">Zip Code *</label>
+              <input type="text" class="form-control mb-4" id="zipcode" placeholder="12345" maxlength="5" pattern = "[0-9]{5}" required>
+            </div>
+              
+            <!-- Services Required (optional) -->
+            <div class="col-sm-6">
+              <label for="servicesReq" class="form-label mb-0">Services Required</label>
+              <p class="form-info-service mb-2">Check all services required.</p>
+            </div>
+            <div class="col-sm-6 mb-3">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="serviceCB" value="Email" id="checkEmail" >
+                <label class="form-check-label" for="checkEmail">
+                  Email
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="serviceCB" value="Phone" id="checkPhone" >
+                <label class="form-check-label" for="checkPhone">
+                  Phone
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="serviceCB" value="Facebook" id="checkFB">
+                <label class="form-check-label" for="checkFB">
+                  Facebook
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="serviceCB" value="Tweeter" id="checkTweeter" >
+                <label class="form-check-label" for="checkTweeter">
+                  Tweeter
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="serviceCB" value="Surface mail" id="checkMail">
+                <label class="form-check-label" for="checkMail">
+                  Surface mail
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="serviceCB" value="Personal visit" id="checkVisit" >
+                <label class="form-check-label" for="checkVisit">
+                  Personal visit
+                </label>
+              </div>
+            </div>
+
+            <!-- Monthly Budget (optional) -->
+            <div class="col-sm-6 mb-1">
+              <label for="monthlyBudget" class="form-label mb-0">Monthly Budget for Services</label>
+            </div>
+            <div class="col-sm-6 mb-3">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="budgetRadios" value="Less than $50" id="checkLess50" >
+                <label class="form-check-label" for="checkLess50">
+                  Less than $50
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="budgetRadios" value="Between $50 - $100" id="checkBetween50n100" >
+                <label class="form-check-label" for="checkBetween50n100">
+                  Between $50 - $100
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="budgetRadios" value="Above $100" id="checkAbove100">
+                <label class="form-check-label" for="checkAbove100">
+                  Above $100
+                </label>
+              </div>
+            </div>    
+
+            <!-- Email *-->
+            <!-- VALIDATE @ SIGN -->
+            <div class="col-md-6 my-4">
+              <label for="email" class="form-label mb-1">Email Address *</label>
+              <input type="email" class="form-control" id="email" placeholder="your@email.com" required>
+            </div>
+
+            <!-- Agree to Terms * -->
+            <div class="col-12 mb-4">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="agreeTerms" id="checkAgree" required>
+                <label class="form-check-label" for="checkAgree">
+                  I agree to the <a href="https://sfsu.edu/">Terms of Service</a>
+                </label>
+              </div>
+            </div>
+
+            <!-- Captcha * -->
+            <div class="col-12 mb-4">
+              <div class="g-recaptcha" data-sitekey="6LemCmcdAAAAAF7MNNmBTERDA9KeLyXRD5KogL5N" required></div>
+            </div>
+            
+
+            <!-- Submit Form Button -->
+            <div class="col-12 mb-4">
+              <button class="btn btn-primary" type="submit" onclick="handleSubmit()">SUBMIT</button>
+            </div>
+        </form>    
+      </div>
+    
+
+    <!-- Optional JavaScript -->
+    <script src="storage.js">
+    </script>
+    <!-- Separate Popper and Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+  </body>
+</html>
