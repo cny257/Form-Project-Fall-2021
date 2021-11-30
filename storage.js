@@ -81,6 +81,7 @@ function handleSubmit() {
     localStorage.setItem("EMAIL", email);
     
     return;
+   
 }
 
 // Retrieve data from local storage
@@ -151,3 +152,16 @@ function geocodeAddress(geocoder, map) {
         }
     });
 }
+
+// validate reCAPTCHA 
+addEventListener("submit", function(event)
+{
+  var response = grecaptcha.getResponse();
+  if(response.length == 0) 
+  { 
+    //reCaptcha not verified
+    alert("Please verify you are not a robot."); 
+    event.preventDefault();
+    return false;
+  }
+});
